@@ -74,14 +74,7 @@ const renderRepos = (repo) => {
           </div>
       </div>
   </div>`
-  // <div class="card text-center mb-3">
-    // <div class="card-body">
-    //   <a href="${repo.url}" target="_blank">${repo.name}</a>
-    //   <p>${repo.description}</p>
-    // </div>
-    // </div>
   userList.appendChild(div)
-  // document.querySelector(`#${user.login}`).addEventListener('click', fetchUserRepos)
 }
 
 const handleSearchSuccess = (users) => {
@@ -130,7 +123,6 @@ const handleReposSuccess = (repos) => {
   repos.forEach(repo => {
     const li = document.createElement('li')
     li.style.marginBottom = '5px'
-
     const h6 = document.createElement('h6')
     const strong = document.createElement('strong')
     strong.textContent = repo.name
@@ -142,7 +134,6 @@ const handleReposSuccess = (repos) => {
     ul.appendChild(li)
   })
   modalContent.appendChild(ul)
-  //Display modal
   const modalElement = document.getElementById('userModal');
   const modal = new bootstrap.Modal(modalElement);
   modal.show();
@@ -156,8 +147,6 @@ const handleError = (error) => {
 const initApp = () => {
   form.addEventListener('submit', searchGitHub)
   document.querySelector('#search').value = ''
-  // handleSearchSuccess(users)
 }
 
 initApp()
-

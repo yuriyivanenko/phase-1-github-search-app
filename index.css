@@ -11,3 +11,67 @@
 ul {
   list-style: none;
 }
+
+.card-hover-lift {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.card-hover-lift:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.switch-container {
+  display: flex;
+  align-items: center;
+}
+.switch-container .form-check {
+  margin: 0 10px;
+}
+.switch-label {
+  font-weight: bold;
+}
+
+.repo-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #e1e4e8;
+  padding-bottom: 0.5rem;
+}
+.repo-title {
+  font-size: 1.5rem;
+  color: #0366d6;
+  text-decoration: none;
+}
+.public-badge {
+  font-size: 0.75rem;
+  padding: 0.2rem 0.4rem;
+  background-color: #e7f3ff;
+  color: #0366d6;
+  border: 1px solid #0366d6;
+  border-radius: 0.25rem;
+  margin-left: 0.5rem;
+}
+.description {
+  margin-bottom: 0.5rem;
+}
+.repo-info {
+  font-size: 0.875rem;
+  color: #586069;
+}
+.icon {
+  margin-right: 0.25rem;
+}
+.star-button {
+  display: flex;
+  align-items: center;
+}
+.language-color {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #701516;
+  display: inline-block;
+  margin-right: 0.25rem;
+}

@@ -4,8 +4,11 @@
   <meta name='viewport' content='width=device-width, initial-scale=1.0'/>
   <meta http-equiv='X-UA-Compatible' content='ie=edge'/>
   <title>Document</title>
-  <script src='js/index.js'></script>
+  
   <link rel='stylesheet' href='index.css'/>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" 
+  rel="stylesheet">
 </head>
 <body>
   <div id='main'>
@@ -13,21 +16,66 @@
     <h2>GitHub Search</h2>
 
     <form id='github-form'>
-      <input id='search' type='text' name='search'>
-      <input type='submit' name='submit'/>
+      <!-- <input id='search' type='text' name='search'> -->
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="">Search for users</span>
+          
+        </div>
+        <input type="text" class="form-control" id="search" aria-describedby="basic-addon3">
+      </div>
+      <!-- Radio switches for search -->
+      <div id="searchType" class="mb-3">
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="flexRadioDefault" id="radioCheckUsers" checked>
+        <label class="form-check-label" for="flexRadioDefault1">
+          Search Users
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="flexRadioDefault" id="radioCheckRepos">
+        <label class="form-check-label" for="flexRadioDefault2">
+          Search Repos
+        </label>
+      </div>
+      </div>
+      <input type='submit' class="btn btn-primary" name='submit'/>
     </form>
 
     <div id='github-container'>
       <ul id='user-list'>
-
       </ul>
 
-      <ul id='repos-list'>
+       <!-- Modal -->
+        <div class="modal fade" id="userModal" tabindex="-1" aria-labelledby="userModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="userModalLabel">User Repositories</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body" id="modalContent">
+                <!-- Repositories will be loaded here -->
 
-      </ul>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
     </div>
 
-  </div>
+    <!-- HTML FOR Github repo -->
+    
 
+  </div>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <!-- Bootstrap JS Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+  <script src='js/index.js'></script>
 </body>
 </html>
